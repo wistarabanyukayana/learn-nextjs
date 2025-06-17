@@ -19,6 +19,9 @@ async function getData(userId: string) {
 }
 
 export default async function DashboardRoute() {
+  // src/app/dashboard/page.tsx
+  console.log("DATABASE_URL is:", process.env.DATABASE_URL);
+
   const { getUser } = getKindeServerSession();
   const user = await getUser();
 
