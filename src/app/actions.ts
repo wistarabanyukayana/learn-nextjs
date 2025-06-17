@@ -28,7 +28,7 @@ export async function handleSubmission(formData: FormData) {
     },
   });
 
-  revalidatePath("/");
+  await revalidatePath("/");
 
   return redirect("/dashboard");
 }
